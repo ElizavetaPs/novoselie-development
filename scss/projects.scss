@@ -1,0 +1,243 @@
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px 50px;
+}
+
+.project {
+  width: 100%;
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    height: 355px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &-live {
+      position: absolute;
+    }
+
+    &-preview {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-top {
+      position: absolute;
+      top: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    &-bottom {
+      position: absolute;
+      bottom: 0;
+      padding: 20px 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    &-clarification {
+      padding: 3px;
+      box-sizing: border-box;
+      background-color: $white;
+      border-radius: 4px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    &-nav {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 0 20px;
+      box-sizing: border-box;
+      display: flex;
+    }
+  }
+
+  &__live {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 3px;
+    box-sizing: border-box;
+    background-color: $white;
+    border-radius: 4px;
+  }
+
+  &__content {
+    width: 100%;
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 28px 20px 0;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $blue-3;
+    margin-bottom: 5px;
+  }
+
+  &__subway {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $blue-1;
+
+    &-icon {
+      display: inline-block;
+      margin: 0 6px;
+      width: 7px;
+      height: 15px;
+      background-image: url('../img/icons/pedestrian.svg');
+    }
+  }
+
+  &__building {
+    font-size: 12px;
+    color: $blue-1;
+    border-bottom: 1px solid $light-grey;
+    padding: 10px 36px 10px 20px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &-details {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      line-height: 17px;
+      color: $blue-3;
+      margin-top: 2px;
+    }
+
+    &-price {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 6px;
+        background-image: url('../img/icons/arrow-down.svg');
+        background-repeat: no-repeat;
+        right: -16px;
+        top: 4px;
+      }
+    }
+  }
+
+  &--head {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+
+    .project {
+      &__slider {
+        max-width: 480px;
+        height: 545px;
+      }
+
+      &__content {
+        width: calc(100% - 480px);
+
+        &-top {
+          display: block;
+          padding: 30px 30px 20px;
+        }
+      }
+
+      &__flats-button {
+        margin-top: 30px;
+      }
+
+      &__building {
+        font-size: 12px;
+        color: $blue-1;
+        border-bottom: 1px solid $light-grey;
+        padding: 30px;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+.more-projects {
+  width: 100%;
+  max-height: 465px;
+  background-image: url('../img/more-projects-bg.png');
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 20px;
+  grid-column: 1 / -1;
+  padding: 30px;
+
+  &__inner {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 385px;
+    height: 100%;
+    border-radius: 20px;
+    padding: 60px 56px 70px;
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 62px;
+    align-content: center;
+  }
+
+  &__logo {
+    margin: 0 auto;
+
+    img {
+      width: 207px;
+      height: 50px;
+    }
+  }
+
+  &__counts {
+    display: flex;
+    justify-content: space-between;
+
+    &--bold {
+      color: $blue-3;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    span {
+      color: $blue-1;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__button {
+    width: 175px;
+    height: 37px;
+    margin: 0 auto;
+  }
+}
