@@ -1,0 +1,120 @@
+.footer {
+  border-top: 1px solid $light-blue;
+
+  &__container {
+    padding: 43px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(3, fit-content(100%));
+    grid-gap: 0 60px;
+
+    a {
+      color: $blue-3;
+
+      &:hover {
+        color: $red-1;
+      }
+    }
+
+    &-item {
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 15px;
+      color: $blue-3;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        color: $red-1;
+      }
+    }
+
+    &-title {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 20px;
+      color: $blue-3;
+    }
+  }
+
+  &__social {
+    &-item {
+      margin-bottom: 15px;
+      font-size: 12px;
+      line-height: 15px;
+
+      a {
+        color: $blue-3;
+
+        &:hover {
+          color: $red-1;
+        }
+      }
+    }
+  }
+
+  &__form {
+    max-width: 370px;
+
+    &-title {
+      font-size: 16px;
+      line-height: 20px;
+      color: $blue-1;
+      padding: 0;
+    }
+
+    &-group {
+      height: 50px;
+      margin: 17px 0 10px;
+      display: flex;
+    }
+
+    &-input {
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid  rgba(0, 0, 0, .1);
+      box-sizing: border-box;
+      padding: 0 10px;
+
+      &::placeholder {
+        color: $blue-1;
+      }
+
+      &:focus{
+        outline: none;
+        border: 1px solid  $blue-1;
+      }
+    }
+
+    &-button {
+      height: 100%;
+      margin-left: 10px;
+    }
+
+    span {
+      display: block;
+      font-size: 12px;
+      line-height: 15px;
+      color: $blue-1;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+
+    span, a {
+      color: $blue-1;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}

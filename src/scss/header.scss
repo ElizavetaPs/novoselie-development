@@ -1,0 +1,77 @@
+@import "variables";
+
+.header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 77px;
+  }
+
+  &__nav {
+    ul {
+      display: flex;
+      max-width: 330px;
+      flex-wrap: wrap;
+
+      li {
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    li > a {
+      cursor: pointer;
+      font-size: 12px;
+      line-height: 15px;
+      color: $blue-3;
+
+      &:hover {
+        color: $red-1;
+      }
+    }
+  }
+
+  &__button {
+    height: 37px;
+  }
+
+  &__contact {
+    button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 17px;
+      color: $blue-3;
+    }
+
+    a {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      color: $blue-3;
+
+      &:hover {
+        color: $red-1;
+      }
+    }
+  }
+
+  &__icon {
+    border: none;
+    background: transparent;
+
+    &:hover svg {
+      fill: $red-1;
+    }
+
+    svg:hover {
+      fill: $red-1;
+    }
+  }
+}
