@@ -102,6 +102,16 @@
     }
   }
 
+  &__price-input {
+    &--min {
+      padding: 0 10px 0 75px;
+    }
+
+    &--max {
+      padding: 0 10px 0 35px;
+    }
+  }
+
   &__input-wrapper {
     position: relative;
     display: flex;
@@ -114,27 +124,83 @@
       padding-left: 10px;
       color: $blue-1;
     }
+  }
 
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+  &__range {
+    position: relative;
+
+    &-slider {
+      height: 2px;
+      position: relative;
+      background: $blue-2;
+      margin-top: 8px;
     }
-  }
 
-  #minPrice {
-    padding: 0 10px 0 75px;
-  }
+    &-progress {
+      height: 100%;
+      left: 0;
+      right: 0;
+      position: absolute;
+      background: $red-1;
+    }
 
+    &-inputs {
+      input {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 0;
+        margin: 0;
 
-  #maxPrice {
-    padding: 0 10px 0 35px;
+        &:first-child {
+          z-index: 1;
+        }
+
+        &::-webkit-slider-thumb {
+          height: 24px;
+          width: 24px;
+          border-radius: 50%;
+          background: $blue-2 url('../img/icons/range-icon.svg') center center no-repeat;
+          pointer-events: auto;
+          -webkit-appearance: none;
+          cursor: grab;
+          position: relative;
+
+          &:active {
+            background-color: $red-1;
+            background-image: none;
+            opacity: 0.3;
+          }
+        }
+
+        &::-moz-range-thumb {
+          height: 24px;
+          width: 24px;
+          border-radius: 50%;
+          background-color: $blue-2;
+          pointer-events: auto;
+          -webkit-appearance: none;
+          cursor: grab;
+          position: relative;
+
+          &:active {
+            background-color: $red-1;
+            opacity: 0.3;
+          }
+        }
+      }
+    }
   }
 
   &__check {
     display: block;
     padding-left: 24px;
     margin-bottom: 14px;
+    cursor: pointer;
 
     &:last-child {
       margin-bottom: 0;
@@ -184,24 +250,7 @@
   }
 }
 
-.filter__range {
-  .c-src {
-    height: 15px;
-  }
-
-  .c-src-track {
-    background-color: $red-1;
-  }
-
-  .c-src-controlKnob {
-    width: 24px;
-    height: 24px;
-    background-color: $blue-2;
-  }
-
-  .c-src-control.active .c-src-controlKnob {
-    background-color: $red-1;
-    opacity: 0.7;
-  }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
-

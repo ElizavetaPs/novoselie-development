@@ -301,17 +301,21 @@
                 <div class="filter__inputs">
                   <div class="filter__input-wrapper">
                     <span>Цена от</span>
-                    <input class="filter__input" id="minPrice" type="number">
+                    <input type="text" pattern="[0-9 ]+" class="filter__input filter__price-input filter__price-input--min" value="0" min="0" max="5 000 000">
                   </div>
                   <div class="filter__input-wrapper">
                     <span>до</span>
-                    <input class="filter__input" id="maxPrice" type="number">
+                    <input type="text" pattern="[0-9 ]+" class="filter__input filter__price-input filter__price-input--max" value="5 000 000" min="0" max="5 000 000">
                   </div>
-                  <div class="filter__range" id="filter-range"
-                    data-min="1450000"
-                    data-max="20000000"
-                    data-range="20000000"
-                  ></div>
+                  <div class="filter__range">
+                    <div class="filter__range-slider">
+                      <div class="filter__range-progress"></div>
+                    </div>
+                    <div class="filter__range-inputs">
+                      <input type="range" class="filter__range-min" min="0" max="5000000" value="0" step="10000">
+                      <input type="range" class="filter__range-max" min="0" max="5000000" value="5000000" step="10000">
+                    </div>
+                  </div>
                 </div>
                 <div class="filter__checks">
                   <label class="filter__check">

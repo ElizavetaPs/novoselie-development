@@ -2,11 +2,14 @@
   "name": "cake.ru",
   "version": "1.0.0",
   "description": "Test",
+  "homepage": "https://elizavetaps.github.io/novoselie-development/",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack serve --open --mode=development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +20,7 @@
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
     "double-slider": "^2.0.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
